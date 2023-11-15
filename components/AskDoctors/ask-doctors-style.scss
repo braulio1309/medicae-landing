@@ -1,0 +1,65 @@
+.deco {
+  @include use-theme(background-color, $palette-primary-light, $palette-primary-dark);
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  position: absolute;
+  @include left(-300px);
+  top: -100px;
+  opacity: 0.2;
+}
+
+.root {
+  position: relative;
+  z-index: 10;
+  .nav {
+    @include breakpoints-down(sm) {
+      display: flex;
+      overflow: auto
+    }
+  }
+}
+
+.side-filter {
+  .nav {
+    background: none;
+    @include breakpoints-down(xs) {
+      padding: spacing(0, 3)
+    }
+  }
+  .filter {
+    border-radius: 40px;
+    text-transform: capitalize;
+    margin-bottom: $spacing1;
+    padding: spacing(0.5, 2);
+    min-height: 36px;
+    .v-list-item-title {
+      text-transform: capitalize;
+    }
+    &:before {
+      border-radius: 40px;  
+    }
+    @include breakpoints-up(md) {
+      width: 90%;
+    }
+    @include breakpoints-down(sm) {
+      text-align: center
+    }
+    @include breakpoints-up(sm) {
+      overflow: hidden;
+    }
+    @include breakpoints-down(sm) {
+      text-align: center
+    }
+  }
+  :deep(.v-list-item--active) {
+    background: $palette-primary-light;
+    color: $palette-primary-dark;
+  }
+}
+
+.massonry {
+  button {
+    width: 100%
+  }
+}

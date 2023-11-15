@@ -1,0 +1,167 @@
+.link {
+  margin: spacing(1, 1.5);
+}
+.footer {
+  margin-top: $spacing8;
+  padding-top: $spacing3;
+  padding-bottom: $spacing3;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      line-height: 32px;
+      a {
+        @include palette-text-secondary;
+        text-decoration: none;
+        font-size: 14px
+      }
+    }
+  }
+  p {
+    @include breakpoints-down(sm) {
+      padding: spacing(0, 3)
+    }
+  }
+  .accordion-root {
+    margin: 0 auto;
+    margin-top: $spacing2
+  }
+  .body-2 {
+    @include palette-text-secondary
+  }
+  &-desc{
+    display: block;
+    font-size: 14px;
+    margin-bottom: $spacing2
+  }
+}
+
+.footer-desc {
+  display: block;
+  font-size: 14px;
+  margin-bottom: $spacing2;
+  @include breakpoints-down(sm) {
+    text-align: center
+  }
+}
+
+.title-nav {
+  .v-theme--dark & {
+    color: $palette-primary-light
+  }
+  .v-theme--light & {
+    color: $palette-primary-main
+  }
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: $spacing3;
+  font-weight: $font-bold
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing3;
+  @include breakpoints-down(sm) {
+    justify-content: center;
+    padding: spacing(0, 3)
+  }
+  img {
+    filter: grayscale(1) contrast(0.5) brightness(1.5);
+    width: 48px;
+    @include margin-right($spacing1)
+  }
+  h6 {
+    @include palette-text-disabled
+  }
+}
+.socmed {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $spacing4;
+  button {
+    margin: $spacing1;
+    .v-theme--dark & {
+      color: $palette-primary-light;
+      background: $dark-divider
+    }
+    .v-theme--light & {
+      color: $palette-primary-main;
+      background: $light-divider
+    }
+    width: 36px;
+    height: 36px;
+    i {
+      .v-theme--dark & {
+        color: $palette-primary-light 
+      }
+      .v-theme--light & {
+        color: $palette-primary-main 
+      }
+    }
+  }
+  .icon {
+    font-size: 24px
+  }
+}
+
+.icon {
+  & + div {
+    background: none !important;
+    padding: spacing(1.5, 1.5, 1.5, 4);
+    width: calc(100% - 32px)
+  }
+}
+
+.select-lang {
+  margin: 0 auto;
+  width: 200px;
+  display: inherit;
+  margin-top: $spacing2;
+  @include use-theme(color, $palette-primary-dark, $palette-primary-light);
+  :deep(.v-field__input) {
+    padding: $spacing1;
+    height: auto;
+    min-height: 0;
+  }
+  :deep(.v-field__append-inner){
+    padding-top: $spacing1
+  }
+  :deep(.v-field__prepend-inner) {
+    padding-top: $spacing1
+  }
+}
+
+.site-map-item {
+  @include breakpoints-down('md') {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important
+  }
+}
+.accordion-root {
+  background: none;
+  box-shadow: none;
+  max-width: 480px;
+  ul li a {
+    font-size: 16px;
+    padding: spacing(1, 0);
+    display: block;
+  }
+}
+.accordion-content.v-expansion-panel {
+  background-color: transparent;
+  box-shadow: none;
+  :deep(.v-expansion-panel__shadow) {
+    display: none;
+  }
+  :deep(.v-expansion-panel-title--active > .v-expansion-panel-title__overlay) {
+    display: none;
+  }
+  &:before, &:after {
+    display: none
+  }
+}
+.accordion-icon {
+  padding: 0
+}
+

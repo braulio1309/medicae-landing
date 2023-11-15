@@ -1,0 +1,33 @@
+.root {
+  blockquote {
+    margin: spacing(5, 4, 0);
+    font-size: 20px;
+    font-style: italic;
+    @include padding-left($spacing2);
+    @include palette-text-secondary;
+    .v-locale--is-ltr & {
+      border-left: 4px solid;
+    }
+    .v-locale--is-rtl & {
+      border-right: 4px solid;
+    }
+    .v-theme--light & {
+      border-color: #D8D8D8;
+    }
+    .v-theme--dark & {
+      border-left-color: rgba(255, 255, 255, 0.2);
+    }
+    @include breakpoints-down(xs) {
+      @include padding-left($spacing2);
+      margin: 0;
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+  h4 {
+    @include breakpoints-down(sm) {
+      text-align: center;
+      margin-top: $spacing1 * -3;
+    }
+  }
+}

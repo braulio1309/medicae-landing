@@ -1,0 +1,34 @@
+.root {
+  position: relative
+}
+
+.parallax-bottom > div{
+  top: -600px;
+  overflow: visible;
+}
+
+.block {
+  > section > * {
+    @media only screen and (min-width: 600px) and (max-width: 959px){
+      padding: spacing(4, 2);
+      display: inline-block;
+      width: 49%
+    }
+  }
+}
+
+.map {
+  background: #dedede;
+  overflow: hidden;
+  width: 100%;
+  height: 700px;
+  @include breakpoints-up(md) {
+    margin-top: $spacing10
+  }
+  @include breakpoints-down(sm) {
+    margin-top: $spacing6 * -1;
+    height: 320px;
+  }
+}
+
+
